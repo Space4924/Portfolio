@@ -1,0 +1,103 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ubuntu', sans-serif;
+}
+
+body{
+  display: felx;
+  align-items: center;
+  min-height: 100vh;
+  background: white;
+}
+.wrapper{
+  display: inline-flex;
+
+}
+
+.wrapper .static-txt{
+  color:black;
+  font-size: 60px;
+  font-weight: 400;
+  width: 130px;
+}
+
+.wrapper .dynamic-txts{
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamic-txts li{
+  color: #FC6D6D;
+  list-style: none;
+  font-size: 80px;
+  font-weight: 500; 
+  position: relative;
+  top: 0;
+   animation: slide 6s steps(4) infinite;
+
+
+}
+
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+  
+}
+.dynamic-txts li span:after{
+  content:"";
+  position: absolute;
+  left: 0;
+  height:100% ;
+  width: 100%;
+  background-color: white;
+  border-left: 2px solid red;
+  animation: typing 1.5s steps(10) infinite;
+
+
+}
+
+@keyframes typing {
+  100%{
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
+  
+}
+.fix {
+  position: relative;
+}
+.wrap {
+  position: relative;
+  top: 14vh;
+  font-size: 4vh;
+  width: 80%;
+  height: 40vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
